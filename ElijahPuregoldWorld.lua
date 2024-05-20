@@ -21,17 +21,14 @@ MainSection:NewButton("Noclip GUI", "?", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ElijahGamingRBLX/Elijah-Scripts/main/NoclipGUI.lua'))()
 end)
 
-local Player = Window:NewTab("Other")
-local PlayerSection = Tab:NewSection("Misc")
-
-PlayerSection:NewButton("Infinite Yield", "Infinite Yield Script", function()
+MainSection:NewButton("Infinite Yield", "Infinite Yield Script", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-PlayerSection:NewSlider("Change Walkspeed", "Set Walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+MainSection:NewSlider("Change Walkspeed", "Set Walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-PlayerSection:NewButton("Reset Walkspeed", "Resets To The Default Walkspeed", function()
+MainSection:NewButton("Reset Walkspeed", "Resets To The Default Walkspeed", function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 end)

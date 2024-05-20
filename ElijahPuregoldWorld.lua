@@ -5,6 +5,10 @@ local Window = Library.CreateLib("Elijah Hub - Puregold World", "BloodTheme")
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Player")
 
+MainSection:NewButton("Fly GUI V3", "Fly", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+end)
+
 MainSection:NewButton("ESP Player", "ESP", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
 end)
@@ -28,6 +32,6 @@ PlayerSection:NewSlider("Change Walkspeed", "Set Walkspeed", 500, 0, function(s)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-Section:NewButton("Reset Walkspeed", "Resets To The Default Walkspeed", function()
+PlayerSection:NewButton("Reset Walkspeed", "Resets To The Default Walkspeed", function()
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 end)

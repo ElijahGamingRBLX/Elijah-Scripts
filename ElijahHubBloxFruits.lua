@@ -14,12 +14,12 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),
     Setting = Window:AddTab({ Title = "Setting", Icon = "settings" }),
-    Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
-    Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
-    Teleport = Window:AddTab({ Title = "Teleport", Icon = "palmtree" }),
-    Fruit = Window:AddTab({ Title = "Devil Fruit", Icon = "cherry" }),
+    Stats = Window:AddTab({ Title = "Stats", Icon = "badge-plus" }),
+    Player = Window:AddTab({ Title = "Player", Icon = "smile" }),
+    Teleport = Window:AddTab({ Title = "Teleport", Icon = "laptop-minimal" }),
+    Fruit = Window:AddTab({ Title = "Devil Fruit", Icon = "apple" }),
     Raid = Window:AddTab({ Title = "Dungeon", Icon = "swords" }),
-    Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
+    Race = Window:AddTab({ Title = "Race V4", Icon = "flag" }),
     Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
 	Misc = Window:AddTab({ Title = "Misc", Icon = "list-plus" }),
 }

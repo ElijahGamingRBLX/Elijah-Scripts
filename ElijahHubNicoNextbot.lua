@@ -133,7 +133,7 @@ Tab8:AddColorpicker({
 	end	  
 })
 Tab2:AddButton({
-	Name = "Esp Bots",
+	Name = "ESP Bots",
 	Callback = function()
 		while task.wait(1) do
 			for i,v in pairs(game.Workspace.bots:GetDescendants()) do
@@ -210,13 +210,40 @@ Tab7:AddToggle({
 })
 
 Tab6:AddButton({
-	Name = "Fly(Press[T])",
+	Name = "Fly (Press T)",
 	Callback = function()
 		loadstring(game:HttpGet("https://pastebin.com/raw/XxnhAdut"))()
 		local Event = game:GetService("ReplicatedStorage").events.respawnchar
 		Event:FireServer()
 	end    
 })
+
+Tab6:AddButton({
+	Name = "Fly GUI V3 (Mobile)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+  	end    
+})
+
+Tab6:AddButton({
+	Name = "Infinity Yield",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+
+Tab6:AddButton({
+	Name = "Infinite Jump",
+	Callback = function()
+      		local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            end
+        end)
+  	end    
+})
+
 Tab7:AddButton({
 	Name = "No Garage Collision",
 	Callback = function()

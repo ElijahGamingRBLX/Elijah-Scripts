@@ -167,3 +167,6 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=I
  end
 	end	  
 })
+
+
+OrionLib:Init()

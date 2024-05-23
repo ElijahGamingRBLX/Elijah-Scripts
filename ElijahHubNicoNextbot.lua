@@ -5,7 +5,7 @@ else
 end
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Elijah Hub - Nico Nextbot", HidePremium = false, SaveConfig = true, IntroEnable = true, IntroText = Elijah Hub, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Elijah Hub - Tower Of Hell", HidePremium = false, SaveConfig = true, IntroEnabled = false, IntroText = "Elijah Hub", ConfigFolder = "OrionTest"})
 local Esp = false
 local Names = false
 local ColoEs = Color3.fromRGB(255, 255, 255)

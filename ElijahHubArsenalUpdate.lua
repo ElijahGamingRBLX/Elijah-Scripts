@@ -1,10 +1,10 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Elijah Hub - Tower Of Hell", HidePremium = false, SaveConfig = true, IntroEnabled = false, IntroText = "Elijah Hub", ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Elijah Hub - Arsenal", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
 	Name = "Elijah Hub - Arsenal",
-	Content = "Elijah Hub Has Been Loaded Welcome "..Player.Name.."!",
+	Content = "Elijah Hub Has Been Loaded",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
@@ -15,8 +15,6 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Welcome To Elijah Hub - Arsenal","Enjoy Using The Script! (More Features Soon)")
-
 Tab:AddButton({
 	Name = "Join Discord",
 	Callback = function()
@@ -24,18 +22,14 @@ Tab:AddButton({
   	end    
 })
 
-local Tab = Window:MakeTab({
+local Tab2 = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-local Section = Tab:AddSection({
-	Name = "Player"
-})
-
 SettingsInfinite = false;
-Tab:AddButton({
+Tab2:AddButton({
 	Name = "Infinite Ammo",
 	Callback = function(K)
       SettingsInfinite = K;
@@ -50,7 +44,7 @@ if SettingsInfinite then
   	end
 })
 
-Tab:AddButton({
+Tab2:AddButton({
 	Name = "Rapid Fire",
 	Callback = function()
       		local as=game.ReplicatedStorage;
@@ -79,32 +73,27 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddButton({
+Tab2:AddButton({
 	Name = "Hitbox",
 	Callback = function()
       		loadstring(game:HttpGet("https://pastebin.com/raw/RrTbsWa4",true))()
   	end    
 })
 
-Tab:AddButton({
+Tab2:AddButton({
 	Name = "Invisible Hitbox",
 	Callback = function()
       		loadstring(game:HttpGet("https://pastebin.com/raw/KpQhjvRQ",true))()
   	end    
 })
 
-local Tab = Window:MakeTab({
+local Tab3 = Window:MakeTab({
 	Name = "Misc",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-
-local Section = Tab:AddSection({
-	Name = "Other Stuff"
-})
-
-Tab:AddToggle({
+Tab3:AddToggle({
 	Name = "Silent Aim",
 	Default = false,
 	Callback = function(O)
@@ -157,7 +146,7 @@ Tab:AddToggle({
 	end    
 })
 
-Tab:AddTextbox({
+Tab3:AddTextbox({
 	Name = "Change Walkspeed",
 	Default = "",
 	TextDisappear = true,
@@ -167,5 +156,4 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed=I
  end
 	end	  
 })
-
 OrionLib:Init()
